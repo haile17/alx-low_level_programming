@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - Entry point
- *
+ * Description: prints "is it positive or negative"
  * Return: Always 0 (Success)
  */
 int main(void)
