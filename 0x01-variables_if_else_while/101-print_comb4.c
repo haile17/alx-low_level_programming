@@ -30,7 +30,7 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-            			}
+				}
 
 				c++;
 			}
@@ -41,3 +41,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
