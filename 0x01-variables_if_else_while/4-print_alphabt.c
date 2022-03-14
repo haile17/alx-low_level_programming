@@ -8,7 +8,6 @@
 int main(void)
 {
  	char c = 'a';
-
 	while (c <= 'z')
 	{
 		if (c != 'q' && c != 'e')
@@ -22,3 +21,4 @@ int main(void)
 	return (0);
 
 }
+
