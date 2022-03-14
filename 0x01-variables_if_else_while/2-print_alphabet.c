@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - entry point 
+ * main-entry point 
  * Description: print alphabets
  * Return: 0
  */
