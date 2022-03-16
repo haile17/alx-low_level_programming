@@ -5,7 +5,6 @@
  * letter Another cases, shows 0
  *
  * @c: The character in ASCII code
- * 
  * Return: 1 for letters. 0 for the rest.
  */
 int _isalpha(int c)
@@ -20,3 +19,4 @@ int _isalpha(int c)
 	}
 	_putchar('\n');
 }
+
