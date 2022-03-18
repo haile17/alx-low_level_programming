@@ -2,13 +2,13 @@
 #include <math.h>
 
 /**
- * main - Print the largest prime factor of the number 1231952
+ * main - Print the largest prime factor of the number 612852475143
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 long x, maxf;
-long number = 1231952;
+long number = 612852475143;
 double square = sqrt(number);
 
 for (x = 1; x <= square; x++)
