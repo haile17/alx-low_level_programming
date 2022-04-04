@@ -1,84 +1,52 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * strtow - char
- * @str: pointer to string params
- * Return: char
+ * _strlen - find length of a string
+ *@s: string
+ *Return: int
  */
 
-char **strtow(char *str)
+
+int _strlen(char *s)
 {
-	int i = 0, j = 0, k = 0;
-	int len = 0, count = 0;
-	char **f, *col;
+	int size = 0;
+	for (; s[size] != '\0'; size++)
+		;
+	return (size);
+}
 
-	if (!str || !*str)
-	{
-		return (NULL);
-	}
+/**
+ * argstostr - description
+ * @ac: int
+ * @av: arguments
+ * Return: string
+ */
 
-	while (*(str + i))
-	{
-		if (*(str + i) != ' ')
-		{
-			if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
-			{
-				count += 1;
-			}
-		}
-		i++;
-	}
-
-	if (count == 0)
-	{
-		return (NULL);
-	}
-	count += 1;
-	f = malloc(sizeof(char *) * count);
-
-	if (!f)
-	{
-		return (NULL);
-	}
-	i = 0;
-
-	while (*str)
-	{
-		while (*str == ' ' && *str)
-		{
-			str++;
-		}
-		len = 0;
-
-		while (*(str + len) != ' ' && *(str + len))
-		{
-			len += 1;
-		}
-		len += 1;
-		col = malloc(sizeof(char) * len);
-
-		if (!col)
-		{
-			for (k = j - 1; k >= 0; k--)
-			{
-				free(f[k]);
-			}
-			free(f);
+char *argstostr(int ac, char **av)
+{
+	int i = 0, nc = 0, j = 0, cmpt = 0;
+	char *s;
+	
+	if (ac == 0 || av == NULL)
 			return (NULL);
-		}
-
-		for (k = 0; k < (len - 1);  k++)
-		{
-			*(col + k) = *(str++);
-		}
-		*(col + k) = '\0';
-		*(f + j) = col;
-
-		if (j < (count - 1))
-		{
-			j++;
-		}
+	
+	for (; i < ac; i++, nc++)
+			nc += _strlen(av[i]);
+	
+	s = malloc(sizeof(char) * nc + 1);
+	if (s == 0)
+			return (NULL);
+	
+	for (i = 0; i < ac; i++)
+	{
+			for (j = 0; av[i][j] != '\0'; j++, cmpt++)
+						s[cmpt] = av[i][j];
+			
+				s[cmpt] = '\n';
+					cmpt++;
 	}
-	*(f + j) = NULL;
-	return (f);
+	s[cmpt] = '\0';
+	
+	return (s);
 }
