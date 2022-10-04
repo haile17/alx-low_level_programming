@@ -1,4 +1,6 @@
 #include "search_algos.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * recursive_search - searchs for a value in array of
