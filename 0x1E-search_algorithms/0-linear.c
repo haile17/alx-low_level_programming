@@ -16,7 +16,6 @@ int linear_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	
 	for (h = 0; h < size; h++)
 	{
 		printf("Vlaue checked array[%li] = [%i]\n", h, array[h]);
