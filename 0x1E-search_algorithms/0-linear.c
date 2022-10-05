@@ -1,6 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * linear_search - search for a value in an array of
@@ -14,16 +12,15 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	size_t i = 0;
+	size_t h = 0;
 
-	if (!array || size == 0)
+	if (array == NULL)
 		return (-1);
-	while (i < size)
+	for (h = 0; h < size; h++)
 	{
-		printf("Vlaue checked array[%lu] = [%d]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
-		i++;
+		printf("Vlaue checked array[%li] = [%i]\n", h, array[h]);
+		if (array[h] == value)
+			return (h);
 	}
 
 	return (-1);
