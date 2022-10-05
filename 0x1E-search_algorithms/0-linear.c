@@ -9,6 +9,8 @@
  *
  * Return: the index of the found value
  * or -1 if not found
+ *
+ * Description: prints a value every time it is compared in the array
  */
 int linear_search(int *array, size_t size, int value)
 {
